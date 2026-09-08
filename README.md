@@ -67,7 +67,7 @@ nexus-ai-chat-companion/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/nexus-ai-chat-companion.git
+   git clone https://github.com/Olamideakinade/nexus-ai-chat-companion.git
    cd nexus-ai-chat-companion
    ```
 

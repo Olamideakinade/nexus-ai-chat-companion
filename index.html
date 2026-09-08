@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI Chat Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon"><i class="fa-solid fa-brain"></i></div>
+                <h2>Nexus AI</h2>
+            </div>
+
+            <div class="sidebar-section">
+                <button id="new-chat-btn" class="primary-btn">
+                    <i class="fa-solid fa-plus"></i> New Chat
+                </button>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="section-title">AI Persona</span>
+                <div class="persona-selector">
+                    <button class="persona-btn active" data-persona="nexus">
+                        <i class="fa-solid fa-robot"></i> Nexus Core
+                    </button>
+                    <button class="persona-btn" data-persona="coder">
+                        <i class="fa-solid fa-code"></i> Code Wizard
+                    </button>
+                    <button class="persona-btn" data-persona="sage">
+                        <i class="fa-solid fa-feather"></i> Sage
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>System Online</span>
+                </div>
+                <button id="export-btn" class="icon-btn" title="Export Chat History">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <div class="chat-header-info">
+                    <h3 id="current-persona-title">Nexus Core</h3>
+                    <p id="current-persona-desc">General purpose AI assistant ready for any task.</p>
+                </div>
+                <div class="chat-header-actions">
+                    <button id="clear-chat-btn" class="secondary-btn" title="Clear Conversation">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                </div>
+            </header>
+
+            <div id="chat-messages" class="chat-messages">
+                <!-- Initial Welcome Message -->
+                <div class="message ai-message">
+                    <div class="avatar"><i class="fa-solid fa-brain"></i></div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            Hello! I am Nexus, your AI assistant. How can I empower your workflow today?
+                        </div>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <textarea 
+                        id="user-input" 
+                        rows="1" 
+                        placeholder="Type your message here... (Press Enter to send)" 
+                        required></textarea>
+                    <button type="submit" id="send-btn" class="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="disclaimer">
+                    Nexus AI may produce inaccurate info. Verify important information.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
